@@ -1,0 +1,16 @@
+/*
+Theme Name:   LifterLMS LaunchPad Child
+Theme URI:    https://lifterlms.com/product/launchpad/
+Description:  Stater child theme for LaunchPad
+Author:       LifterLMS
+Author URI:   https://lifterlms.com
+Template:     lifterlms-launchpad
+Version:      1.0.0
+License:      GNU General Public License v3 or later
+License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:  lifterlms-launchpad-child
+
+This stylesheet is NOT loaded! Instead add your custom CSS to the files at:
+assets/public/css/style.css (this is loaded on the FRONTEND of your site)
+assets/admin/css/style.css (this is loaded on LaunchPad admin screens)
+*/
