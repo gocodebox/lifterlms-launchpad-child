@@ -17,6 +17,26 @@ function lp_child_views_dir( $dir ) {
 add_filter( 'launchpad_views_directory', 'lp_child_views_dir', 10, 1 );
 
 /**
+ * Allow templates added to resources/views to override default LP views
+ * @param    string     $template  full template path
+ * @param    string     $name      file name
+ * @param    string     $path      path without file name
+ * @return   string
+ * @since    1.1.0
+ * @version  1.1.0
+ */
+function lp_child_locate_template( $template, $name, $path ) {
+
+	$override = str_replace( get_template_directory(), get_stylesheet_directory(), $template );
+	if ( file_exists( $override ) ) {
+		return $override;
+	}
+
+	return $template;
+}
+add_filter( 'launchpad_locate_template', 'lp_child_locate_template', 10, 3 );
+
+/**
  * Automatically load parent styles as dependencies to child theme stylesheets
  * @param    array     $styles  default stylesheet dependencies
  * @return   array
